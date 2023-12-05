@@ -1,16 +1,10 @@
-# React Shopping Cart
+# React Shopping Cart Functionality
+This is the shopping cart functionality built using following technology stack
+1) NextJS 12
+2) React 18
+3) TypeScript
+4) React-Query
+6) Chakra-ui
+7) React-icons
 
-A Shopping cart built w/ Next, TypeScript, Chakra-ui
-
-## Live Version
-
-[https://shoppy-shopping.vercel.app](https://shoppy-shopping.vercel.app)
-
-## Tech Stack
-
-- NextJS
-- TypeScript
-- React-Query
-- Lodash (for debouncing)
-- Chakra-ui
-- React-icons
+will add the whole app functionality very soon..
