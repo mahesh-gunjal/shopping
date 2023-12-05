@@ -8,3 +8,6 @@ This is the shopping cart functionality built using following technology stack
 7) React-icons
 
 will add the whole app functionality very soon..
+To run the code follow:
+1)yarn
+2)yarn dev
