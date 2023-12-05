@@ -9,14 +9,13 @@ import {
   InputLeftElement,
   useDisclosure,
 } from "@chakra-ui/react";
-import { useRef } from "react";
 import { FaBolt, FaShoppingCart, FaSearch } from "react-icons/fa";
 import DrawerComponent from "./Drawer";
 
 const Header: React.FunctionComponent = () => {
-  const { inputSearchedTerm } = useShoppingCart();
+  const { inputSearchedTerm, cartItems } = useShoppingCart();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const drawerRef = useRef();
+  const count = cartItems.length
 
   return (
     <>
@@ -51,9 +50,10 @@ const Header: React.FunctionComponent = () => {
             </InputGroup>
 
             {/* Cart option  */}
-            <Flex fontSize="4xl" alignItems="center" justifyContent="center">
-              <Button ref={drawerRef} onClick={onOpen}>
+            <Flex fontSize="4xl" alignItems="center" justifyContent="center" position="relative">
+              <Button onClick={onOpen}>
                 <FaShoppingCart fontSize="26px" />
+                {!!count && <div style={{ minHeight: '20px', minWidth: '20px', borderRadius: '50%', backgroundColor: 'red', color: '#fff', position: 'absolute', right: '-10px', top: '-10px' }}>{count}</div>}
               </Button>
             </Flex>
           </Flex>
